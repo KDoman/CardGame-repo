@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+<body>
+    <header>
+        <h1>
+            <span>C</span>
+            <span>A</span>
+            <span>R</span>
+            <span>D</span>
+            <br>
+            <span>G</span>
+            <span>A</span>
+            <span>M</span>
+            <span>E</span>
+        </h1>
+    </header>
+    <main>
+        <!-- <section>
+            <p>
+            There is 20 card in deck.
+            Every combination raising or lowering 3 numbers after each other 
+            ex. one,two,three / five,six,seven / five,four,three etc... 
+            Gives you a points. For one combination of cards in different 
+            colors you achieve 30 points, on the same color you achive 60 points.
+
+            Your goal is to collect many points as you can.
+            </p>
+        </section> -->
+
+        <section>
+            <div id="threeCardsContainer">
+                <div id="resetQuestion">
+                    Do you want to reset game?
+                    <div id="resetQuestionYes">Yes</div>
+                    <div id="resetQuestionNo">No</div>
+                </div>
+                <div id="points5">
+                    <p>
+                        <div id="copyCardsContainer">
+                            <div class="copyFirstCard"> X </div>
+                            <div class="copySecondCard"> X </div>
+                            <div class="copyThirdCard"> X </div>
+                        </div>
+                        All cards have the same color!
+                        You achieved 5 points !
+                    </p>
+                    <div id="points5Ok">
+                        Ok
+                    </div>
+                </div>
+                <div id="points10">
+                    <p>
+                        <div id="copyCardsContainerNumber">
+                            <div class="copyFirstCardNumber"> X </div>
+                            <div class="copySecondCardNumber"> X </div>
+                            <div class="copyThirdCardNumber"> X </div>
+                        </div>
+                        All cards have the same number!
+                        You achieved 20 points !
+                    </p>
+                    <div id="points10Ok">
+                        Ok
+                    </div>
+                </div>
+                <div id="cardAllertFirst">
+                    <p>
+                        Do you want to delete first card?
+                    </p>
+                    <div id="cardAllertFirstYes"> Yes </div>
+                    <div id="cardAllertFirstNo"> No </div>
+                </div>
+                <div id="cardAllertSecond">
+                    <p>
+                        Do you want to delete second card?
+                    </p>
+                    <div id="cardAllertSecondYes"> Yes </div>
+                    <div id="cardAllertSecondNo"> No </div>
+                </div>
+                <div id="cardAllertThird">
+                    <p>
+                        Do you want to delete third card?
+                    </p>
+                    <div id="cardAllertThirdYes"> Yes </div>
+                    <div id="cardAllertThirdNo"> No </div>
+                </div>
+                <div class="firstCard"> X </div>
+                <div class="secondCard"> X </div>
+                <div class="thirdCard"> X </div>
+            </div>
+            <section id="buttonSection">
+                <button class="startBtn">Start Game</button>
+                <button class="resetBtn">Reset</button>
+            </section>
+            <div id="DeckAndCounterCointainer">
+                <div id="deck">
+                    <p>
+                        Cards 30
+                    </p>
+                </div>
+                <div id="counter">
+                    Points: 0
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
