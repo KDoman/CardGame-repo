@@ -107,7 +107,6 @@ let pointerEvent = () => {
     thirdCard.style.pointerEvents = `auto`;
 }
 
-
 // ----------------Card colors
 const green = `rgb(16, 195, 40)`;
 const blue = `rgb(21, 126, 247)`;
@@ -177,7 +176,7 @@ deck.addEventListener('click',() => {
 
 
 
-//------------------------------------Deleting one card from 3 cards deck 
+//Deleting one card from 3 cards deck 
 const cardAllertfirst = document.querySelector('#cardAllertFirst');
 const cardAllertsecond = document.querySelector('#cardAllertSecond');
 const cardAllertthird = document.querySelector('#cardAllertThird');
@@ -189,38 +188,45 @@ const thirdCardAllertYes = document.querySelector(`#cardAllertThirdYes`);
 const thirdCardAllertNo = document.querySelector(`#cardAllertThirdNo`);
 
 
-
-
-class generateRandomCard{
-    constructor(card,allert,allertYes,allertNo){
-        this.card = card;
-        this.allert = allert;
-        this.allertYes = allertYes;
-        this.allertNo = allertNo;
-    }
-    randomCard = () => {
-        if(this.card.style.backgroundColor != `grey`){
-            this.allert.style.display = "block";
-            this.allertYes.addEventListener(`click`,() => {
-                this.card.innerText = "X";
-                this.card.style.backgroundColor = `grey`;
-                this.allert.style.display = "none";
-            })
-            this.allertNo.addEventListener(`click`,() => {
-                this.allert.style.display = "none";
-            })
-        }
-
-    }
-}
-
-const firstCardTest = new generateRandomCard(firstCard,cardAllertfirst,firstCardAllertYes,firstCardAllertNo);
-const secondCardTest = new generateRandomCard(secondCard,cardAllertsecond,secondCardAllertYes,secondCardAllertNo);
-const thirdCardTest = new generateRandomCard(thirdCard,cardAllertthird,thirdCardAllertYes,thirdCardAllertNo);
-
 // ----first Card
-firstCard.addEventListener(`click`,firstCardTest.randomCard)
+firstCard.addEventListener(`click`,() =>{
+    if(firstCard.style.backgroundColor != `grey`){
+        cardAllertfirst.style.display = "block";
+        cardAllertFirstYes.addEventListener(`click`,() => {
+            firstCard.innerText = "X";
+            firstCard.style.backgroundColor = `grey`;
+            cardAllertfirst.style.display = "none";
+        })
+        cardAllertFirstNo.addEventListener(`click`,() => {
+            cardAllertfirst.style.display = "none";
+        })
+    }
+})
 // -------second card
-secondCard.addEventListener(`click`,secondCardTest.randomCard)
+secondCard.addEventListener(`click`,() =>{
+    if(secondCard.style.backgroundColor != `grey`){
+        cardAllertsecond.style.display = "block";
+        cardAllertSecondYes.addEventListener(`click`,() => {
+            secondCard.innerText = "X";
+            secondCard.style.backgroundColor = `grey`;
+            cardAllertsecond.style.display = "none";
+        })
+        cardAllertSecondNo.addEventListener(`click`,() => {
+            cardAllertsecond.style.display = "none";
+        })
+    }
+})
 // -------thirdCard
-thirdCard.addEventListener(`click`,thirdCardTest.randomCard)
+thirdCard.addEventListener(`click`,() =>{
+    if(thirdCard.style.backgroundColor != `grey`){
+        cardAllertthird.style.display = "block";
+        cardAllertThirdYes.addEventListener(`click`,() => {
+            thirdCard.innerText = "X";
+            thirdCard.style.backgroundColor = `grey`;
+            cardAllertthird.style.display = "none";
+        })
+        cardAllertThirdNo.addEventListener(`click`,() => {
+            cardAllertthird.style.display = "none";
+        })
+    }
+})
